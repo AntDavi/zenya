@@ -17,7 +17,7 @@ export function LogoIcon({ width = 32, height = 32 }) {
 }
 
 // Componente LogoMark
-export function LogoMark({ width = 32, height = 32 }) {
+export function LogoMark({ width = 80, height = 80 }) {
     return (
         <Link href="/">
             <Image
