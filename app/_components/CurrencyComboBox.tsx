@@ -34,8 +34,10 @@ export function CurrencyComboBox() {
 
     const userSettings = useQuery({
         queryKey: ["userSettings"],
-        queryFn: () => fetch("/api/user-settings").then((res) => res.json()),
+        queryFn: () => fetch("api/user-settings").then((res) => res.json()),
     })
+
+    // console.log('@@@ USER SETTINGS', userSettings)
 
     if (isDesktop) {
         return (
