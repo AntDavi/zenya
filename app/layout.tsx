@@ -3,6 +3,7 @@ import { Kufam } from "next/font/google"
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import RootProviders from "./_components/providers/RootProviders";
+import { Toaster } from "./_components/ui/sonner";
 
 const kufam = Kufam({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <body
           className={`${kufam.className} antialiased`}
         >
+          <Toaster richColors position="bottom-right" />
           <RootProviders>
             {children}
           </RootProviders>
