@@ -54,13 +54,13 @@ export function CurrencyComboBox() {
 
     const mutation = useMutation({
         mutationFn: UpdateUserCurrency,
-        onSuccess: () => {
+        onSuccess: (data: UserSettings) => {
             toast.success("Moeda atualizada com sucesso! 🎉", {
                 id: "update-currency",
             });
 
             setSelectedOption(
-                Currencies.find((c) => c.value === userSettings.data?.currency) || null
+                Currencies.find((c) => c.value === data.currency) || null
             );
         },
         onError: (e) => {
